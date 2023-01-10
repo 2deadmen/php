@@ -4,9 +4,7 @@
 <h2 align="center">provide other documents</h2>
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="other_docsprocess.php" method="POST" enctype="multipart/form-data">
-<tr><td>
-  <label>parent id</label>
-  <input type="number" name="Parent_id" id="Parent_id"></td></tr>
+
 <tr><td><label>Affidivit letter</label>
   <input type="file"  required name="affidivit_letter" id="affidivit_letter"></td></tr>
   <tr><td><label>undertaking letter</label>

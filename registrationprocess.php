@@ -43,8 +43,10 @@ if($conn->connect_error)
              while($row = $result->fetch_assoc())
               {
                $id=$row['Parent_id'];
+			
 			      echo"<script language='javascript'>
-                      alert('registration success ...your parent id is ".$id."');
+                      
+				      alert('registration success ...your parent id is ".$id."');
 					  location.href='login.php';
 			   </script>";
               }

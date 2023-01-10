@@ -6,8 +6,7 @@
 <form action="h_fam_detailsprocess.php" method="POST" enctype="multipart/form-data">
 <tr><td>
 	
-    <label>Parent ID </label>
-    <input type="number" name="Parent_id" id="Parent_id">
+
 </td></tr>
 
 <tr><td>

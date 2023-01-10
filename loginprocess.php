@@ -14,7 +14,7 @@ if($conn->connect_error)
 	else
 	  {
 	
-		$sql1="SELECT `Password` FROM `registration` where `Email`='$uname'";
+		$sql1="SELECT `Password`,`Parent_id` FROM `registration` where `Email`='$uname'";
 		$result = $conn->query($sql1);
 		 if($result->num_rows>0)//when db records are found store in associative array...
         {
@@ -23,11 +23,13 @@ if($conn->connect_error)
 	  while($row = $result->fetch_assoc())
 	   {
 		$pass=$row['Password'];
+		$pid= $row['Parent_id'];
 	   }
 		if($pass==md5($pswd)){
 			session_start();
 	
 			$_SESSION['user'] = $pass; 
+			$_SESSION['pid'] = $pid;
 			echo"<script language='javascript'>
 	
 			window.location.href ='index.php';
@@ -40,6 +42,12 @@ if($conn->connect_error)
 			location.href='login.php';
 	 </script>";
 		}
+	   }else{
+		echo "<script language='javascript'>
+	        
+			alert('user do not exist');
+			location.href='login.php';
+	 </script>";
 	   }
 	 
   }

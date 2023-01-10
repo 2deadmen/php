@@ -60,7 +60,7 @@
               </div>
                <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="number" name='Phone_no' placeholder="Enter your phone number" required>
+                <input type="tel" name='Phone_no'  minlength=10 placeholder="Enter your phone number" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
@@ -68,7 +68,7 @@
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name='Password' placeholder="Enter your password" required>
+                <input type="password" minlength=8 name='Password' placeholder="Enter your password" required>
               </div>
               <div class="button input-box">
                 <input type="submit" name='submit' value="Submit">

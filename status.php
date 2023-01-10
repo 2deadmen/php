@@ -10,16 +10,12 @@
    require('session.php'); 
     ?>
 
-    <form align='center' style='margin:50px;' action="" method='post'>
-        <div>Enter your parent id <br><br>
-            <input type="number" name='pid'>
-        &nbsp; <input type="submit" name='submit'></div>
-    </form><a align='center' href="index.php">Home</a>
+   <a align='center' href="index.php">Home</a>
 
 
     <?php
-if(isset($_POST['pid'])){
-    $pid=$_POST['pid'];
+if(isset($_SESSION['pid'])){
+    $pid=$_SESSION['pid'];
     require('./dbconnect.php');
     $sql1="SELECT `status` FROM `registration` where `Parent_id`='$pid'";
 		$result = $conn->query($sql1);
@@ -32,13 +28,13 @@ if(isset($_POST['pid'])){
 		$state=$row['status'];
 	   }
        if($state=='pending'){
-        echo "Pending ";
+        echo "<h1>your application is under review</h1> ";
        }
        elseif($state=='accepted'){
-        echo "Accepted";
+        echo "<h1>your application has been Accepted</h1>";
        }
        else{
-        echo "Rejected";
+        echo "<h1>Sorry..your application was Rejected...</h1>";
        }
 
 }else{

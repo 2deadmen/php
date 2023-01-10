@@ -6,8 +6,7 @@
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="w_personal_detailsprocess.php" method="POST" enctype="multipart/form-data">
 <tr>
-<td><label>Parent_id  </label>
-  <input type="number" name="Parent_id" id="Parent_id">
+<td>
   <label>Name  </label>
   <input type="text" name="Name" id="Name"></td></tr>
     <tr><td><label>DOB  </label>

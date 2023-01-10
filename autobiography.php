@@ -4,9 +4,7 @@
 <h2 align="center"> Other's Details in Your Family</h2>
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="autobiographyprocess.php" method="POST" enctype="multipart/form-data">
-<tr><td>
- <label>Parent_id </label>
- <input type="number" name="Parent_id" id="Parent_id"></td></tr>
+
   
 <tr><td>
 	<label>Name:</label>

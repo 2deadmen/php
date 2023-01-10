@@ -6,11 +6,7 @@
 <h2 align="center"> Enter wife Family Details </h2>
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="w_fam_detailsprocess.php" method="POST" enctype="multipart/form-data">
-<tr><td>
-	
-    <label>Parent ID </label>
-    <input type="number" name="Parent_id" id="Parent_id">
-</td></tr>
+
 
 <tr><td>
 	<label>Name:</label>

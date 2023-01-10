@@ -10,10 +10,7 @@
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="referenceprocess.php" method="POST" >
 
- <tr><td><label>parent_id </label>
- <input type="number" name="Parent_id" id="Parent_id"></td></tr>
-  
-<tr>
+
   <td><label>Name</label>
   <input type="text" name="Name" id="Name"></td></tr>
   <tr><td><label>Designation</label>

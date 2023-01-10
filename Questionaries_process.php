@@ -4,7 +4,8 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']== 'POST')
 {
 //form variables
 
-$pid=$_POST['Parent_id'];
+session_start();
+$Parent_id=$_SESSION['pid'];
 $Rooms_in_Home=$_POST['Rooms_in_Home'];
 $Spare_Time=$_POST['Spare_Time'];
 $Help_at_Home=$_POST['Help_at_Home'];
@@ -27,7 +28,7 @@ if($conn->connect_error)
 	  }
 	else
 	  {
-	    $sql ="INSERT INTO `questionires`(`Parent_id`, `Rooms_in_Home`, `Spare_Time`, `Help_at_Home`, `Strng_pnts_Mrg`, `Decision_for_Adopt`, `Both_wish_Adopt`, `Fam_Decision`, `Fam_Reaction`, `ifNo_Reason`, `Strength_as_Parent`, `ChildeCare_Absence`, `Legal_Adopt`, `Introducer`, `Other_Details`) VALUES ('$pid','$Rooms_in_Home','$Spare_Time','$Help_at_Home','$Strng_pnts_Mrg','$Decision_for_Adopt','$Both_wish_Adopt','$Fam_Decision','$Fam_Reaction','$ifNo_Reason','$Strength_as_Parent','$ChildeCare_Absence','$Legal_Adopt','$Introducer','$Other_Details')";
+	    $sql ="INSERT INTO `questionires`(`Parent_id`, `Rooms_in_Home`, `Spare_Time`, `Help_at_Home`, `Strng_pnts_Mrg`, `Decision_for_Adopt`, `Both_wish_Adopt`, `Fam_Decision`, `Fam_Reaction`, `ifNo_Reason`, `Strength_as_Parent`, `ChildeCare_Absence`, `Legal_Adopt`, `Introducer`, `Other_Details`) VALUES ('$Parent_id','$Rooms_in_Home','$Spare_Time','$Help_at_Home','$Strng_pnts_Mrg','$Decision_for_Adopt','$Both_wish_Adopt','$Fam_Decision','$Fam_Reaction','$ifNo_Reason','$Strength_as_Parent','$ChildeCare_Absence','$Legal_Adopt','$Introducer','$Other_Details')";
         if($conn->query($sql)===TRUE)
 		 {
             echo"<script language='javascript'>

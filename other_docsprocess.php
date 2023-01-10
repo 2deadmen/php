@@ -5,7 +5,8 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']== 'POST')
 //form variables
 
 
-$Parent_id=$_POST['Parent_id'];
+session_start();
+$Parent_id=$_SESSION['pid'];
 $affltr=addslashes(file_get_contents($_FILES['affidivit_letter']['tmp_name']));
 
 $undrtking=addslashes(file_get_contents($_FILES['Undertaking_Letter']['tmp_name']));

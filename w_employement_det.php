@@ -5,10 +5,7 @@
 <h2 align="center"> Employement Details of wife</h2>
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="w_employement_detprocess.php" method="POST" enctype="multipart/form-data">
-<tr><td>
-	<label>Parent ID </label>
-    <input type="number" name="Parent_id" id="Parent_id">
-</td></tr>
+
 
 <tr><td>
 	<label>Occupation:</label>

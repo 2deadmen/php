@@ -3,7 +3,8 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']== 'POST')
 
 {
 //form variables
-$pid=$_POST['Parent_id'];
+session_start();
+$Parent_id=$_SESSION['pid'];
 $name=$_POST['Name'];
 $rel=$_POST['relationship'];
 $age=$_POST['Age'];
@@ -18,11 +19,11 @@ if($conn->connect_error)
 	  }
 	else
 	  {
-	    $sql ="INSERT INTO `h_fam_details`( `Parent_id`, `Name`, `relationship`, `Age`, `Occupation`,`liv_st`) VALUES ('$pid','$name','$rel','$age','$occ','$liv')";
+	    $sql ="INSERT INTO `h_fam_details`( `Parent_id`, `Name`, `relationship`, `Age`, `Occupation`,`liv_st`) VALUES ('$Parent_id','$name','$rel','$age','$occ','$liv')";
         if($conn->query($sql)===TRUE)
 		 {
 			echo"<script language='javascript'>
-			
+		
 			location.href='w_fam_details.php';
 	 </script>";
 			

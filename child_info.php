@@ -7,8 +7,6 @@
 <table border="3" align="center" cellspacing="5" cellpadding="6">
 <form action="child_infoprocess.php" method="POST" enctype="multipart/form-data">
 
- <tr><td><label>parent_id </label>
- <input type="number" name="Parent_id" id="Parent_id"></td></tr>
   
   <tr><td><label>Name:  </label>
  <input type="text" name="Name" id="Name">

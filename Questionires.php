@@ -6,8 +6,7 @@
 
 <form action="Questionaries_process.php" method="POST" enctype="multipart/form-data">
   
-<tr><td><label>parent_id </label>
- <input type="number" name="Parent_id" id="Parent_id"></td></tr>
+
   
 <tr><tr><td><label><b>01.Your Home No. of rooms amenities:</label>
   <textarea name='Rooms_in_Home' cols="45" rows="3"></textarea></td></tr>

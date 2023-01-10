@@ -3,7 +3,8 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']== 'POST')
 
 {
 //form variables
-$Parent_id=$_POST['Parent_id'];
+session_start();
+$Parent_id=$_SESSION['pid'];
 $name=$_POST['Name'];
 $txtDOB=$_POST['DOB'];
 $address=$_POST['Address'];

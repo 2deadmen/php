@@ -4,7 +4,8 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']== 'POST')
 {
 //form variables
 
-$pid=$_POST['Parent_id'];
+session_start();
+$Parent_id=$_SESSION['pid'];
 $age=$_POST['Age'];
 $gender=$_POST['Gender'];
 //db connection
@@ -15,7 +16,7 @@ if($conn->connect_error)
 	  }
 	else
 	  {
-	    $sql ="INSERT INTO `child_desired`(`Parent_id`,`Age`,`Gender`) VALUES ('$pid','$age','$gender')";
+	    $sql ="INSERT INTO `child_desired`(`Parent_id`,`Age`,`Gender`) VALUES ('$Parent_id','$age','$gender')";
         if($conn->query($sql)===TRUE)
 		 {
 			echo"<script language='javascript'>
